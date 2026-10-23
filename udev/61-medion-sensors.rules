@@ -1,0 +1,4 @@
+# Medion S14405: KIOX020A is in the keyboard base.
+SUBSYSTEM=="iio", KERNEL=="iio:device*", KERNELS=="i2c-KIOX020A:00", ENV{ACCEL_LOCATION}="base"
+# Medion S14405: KIOX010A is in the display; calibrated screen rotation.
+SUBSYSTEM=="iio", KERNEL=="iio:device*", KERNELS=="i2c-KIOX010A:00", ENV{ACCEL_LOCATION}="display", ENV{ACCEL_MOUNT_MATRIX}="0, -1, 0; -1, 0, 0; 0, 0, -1"

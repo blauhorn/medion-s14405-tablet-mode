@@ -1,0 +1,13 @@
+[Unit]
+Description=Medion S14405 Convertible Tablet Mode
+After=systemd-udev-trigger.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /usr/local/lib/medion-tablet/medion-tablet-service.py
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
